@@ -1,0 +1,27 @@
+{
+    "name": "front-matter-search",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "npx @11ty/eleventy --serve --port=8088"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/danielvoweb/front-matter-search.git"
+    },
+    "keywords": [
+        "eleventyjs",
+        "front-matter",
+        "search"
+    ],
+    "author": "dan@daniel-vo.com",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/danielvoweb/front-matter-search/issues"
+    },
+    "homepage": "https://github.com/danielvoweb/front-matter-search#readme",
+    "devDependencies": {
+        "@11ty/eleventy": "^0.11.0"
+    }
+}
