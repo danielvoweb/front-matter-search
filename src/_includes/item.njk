@@ -1,0 +1,14 @@
+---
+layout: layout.njk
+---
+
+<h2>{{ title }}</h2>
+
+{{ content | safe }}
+
+<h3>Tags:</h3>
+<ul>
+    {%- for tag, post in collections -%}
+    <li>{{ tag }} {{ post[0].data.title }} {{ post[0].data.url }}</li>
+    {%- endfor -%}
+</ul>
