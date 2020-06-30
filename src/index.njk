@@ -1,6 +1,29 @@
 ---
 layout: layout.njk
 title: Index
+url: /
 ---
 
-My stuff
+<input type="search" id="search" />
+
+<ol id="results">
+    {% for tag, post in collections %}
+    <li data-{{tag}}>
+        {{ tag }} {{ post[0].data.title }} {{ post[0].data.url }}
+    </li>
+    {% endfor %}
+</ol>
+
+<script>
+    const search = document.getElementById('search')
+    search.addEventListener('keyup', (e) => {
+        const searchString = search.value
+        const matchingResults = document.querySelectorAll(
+            `[data-${searchString}]`
+        )
+
+        matchingResults.forEach((el) => {
+            el.style.display = 'block'
+        })
+    })
+</script>
