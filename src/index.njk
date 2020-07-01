@@ -4,26 +4,63 @@ title: Index
 url: /
 ---
 
-<input type="search" id="search" />
+<section>
+    <h1 class="title">Glossary Search</h1>
 
-<ol id="results">
-    {% for tag, post in collections %}
-    <li data-{{tag}}>
-        {{ tag }} {{ post[0].data.title }} {{ post[0].data.url }}
-    </li>
-    {% endfor %}
-</ol>
+    <input
+        class="input"
+        autofocus
+        autocomplete="off"
+        type="search"
+        id="search"
+        placeholder="Use a keyword to describe a fruit or vegetable..."
+    />
+</section>
+<section>
+    <ol id="results">
+        {% for tag, posts in collections %} {% if tag != "all" %} {% for post in
+        posts %}
+        <li data-result="{{ tag }}">
+            {{ post.data.title }}
+            {{ post.data.url }}
+        </li>
+        {% endfor %} {% endif %} {% endfor %}
+        <li data-noresult>
+            No results found
+        </li>
+    </ol>
+</section>
 
 <script>
-    const search = document.getElementById('search')
-    search.addEventListener('keyup', (e) => {
-        const searchString = search.value
-        const matchingResults = document.querySelectorAll(
-            `[data-${searchString}]`
-        )
+    // const search = document.getElementById('search')
+    // search.addEventListener('keyup', (e) => {
+    //     const searchString = search.value
+    //     const matchingResults = document.querySelectorAll(
+    //         `[data-${searchString}]`
+    //     )
 
-        matchingResults.forEach((el) => {
-            el.style.display = 'block'
-        })
-    })
+    //     matchingResults.forEach((el) => {
+    //         el.style.display = 'block'
+    //     })
+    // })
+
+    const otherResults = (selected) => {
+        const allResults = [...document.querySelectorAll('#results li')]
+        return allResults.filter((result) => !selected.includes(result))
+    }
+
+    const show = (el) => {
+        el.style.display = 'block'
+    }
+
+    const hide = (el) => {
+        el.style.display = 'none'
+    }
+
+    const hideAll = (elements) => {
+        elements.forEach(hide)
+    }
+
+    const selected = [...document.querySelectorAll('[data-result=green]')]
+    hideAll(otherResults(selected))
 </script>
