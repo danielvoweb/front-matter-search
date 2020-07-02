@@ -5,3 +5,13 @@ layout: layout.njk
 <h2>{{ title }}</h2>
 
 {{ content | safe }}
+
+<h3>terms:</h3>
+<ol>
+    {% for tag, posts in collections %} {% for post in posts %} {% if
+    post.data.title == title %} {% if tag != "all" %}
+    <li data-result="{{ tag.toLowerCase().replace(' ', '_') }}">
+        {{ tag }}
+    </li>
+    {% endif %} {% endif %} {% endfor %} {% endfor %}
+</ol>
