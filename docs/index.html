@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Front Matter Search</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+        />
+    </head>
+    <body>
+        <div class="container">
+            
+<section>
+    <h1 class="title">Glossary Search</h1>
+
+    <input
+        class="input"
+        autofocus
+        autocomplete="off"
+        type="search"
+        id="search"
+        placeholder="Use a keyword to describe a fruit or vegetable..."
+    />
+</section>
+<section>
+    <ol id="results">
+        <li data-noresult style="display: none;">
+            No results found
+        </li>
+           
+        <li
+            data-result="apple"
+            style="display: none;"
+        >
+            <a href="/glossary/a/apple/">Apple</a
+            >, matches "Apple"
+        </li>
+          
+        <li
+            data-result="avocado"
+            style="display: none;"
+        >
+            <a href="/glossary/a/avocado/">Avocado</a
+            >, matches "Avocado"
+        </li>
+          
+        <li
+            data-result="banana"
+            style="display: none;"
+        >
+            <a href="/glossary/b/banana/">Banana</a
+            >, matches "Banana"
+        </li>
+          
+        <li
+            data-result="broccoli"
+            style="display: none;"
+        >
+            <a href="/glossary/b/broccoli/">Broccoli</a
+            >, matches "Broccoli"
+        </li>
+          
+        <li
+            data-result="cabbage"
+            style="display: none;"
+        >
+            <a href="/glossary/c/cabbage/">Cabbage</a
+            >, matches "Cabbage"
+        </li>
+          
+        <li
+            data-result="watermelon"
+            style="display: none;"
+        >
+            <a href="/glossary/w/watermelon/">Watermelon</a
+            >, matches "Watermelon"
+        </li>
+          
+        <li
+            data-result="orange"
+            style="display: none;"
+        >
+            <a href="/glossary/o/orange/">Orange</a
+            >, matches "Orange"
+        </li>
+              
+        <li
+            data-result="green"
+            style="display: none;"
+        >
+            <a href="/glossary/a/avocado/">Avocado</a
+            >, matches "green"
+        </li>
+        
+        <li
+            data-result="green"
+            style="display: none;"
+        >
+            <a href="/glossary/b/broccoli/">Broccoli</a
+            >, matches "green"
+        </li>
+        
+        <li
+            data-result="green"
+            style="display: none;"
+        >
+            <a href="/glossary/c/cabbage/">Cabbage</a
+            >, matches "green"
+        </li>
+        
+        <li
+            data-result="green"
+            style="display: none;"
+        >
+            <a href="/glossary/w/watermelon/">Watermelon</a
+            >, matches "green"
+        </li>
+            
+        <li
+            data-result="seeds"
+            style="display: none;"
+        >
+            <a href="/glossary/a/apple/">Apple</a
+            >, matches "seeds"
+        </li>
+        
+        <li
+            data-result="seeds"
+            style="display: none;"
+        >
+            <a href="/glossary/a/avocado/">Avocado</a
+            >, matches "seeds"
+        </li>
+        
+        <li
+            data-result="seeds"
+            style="display: none;"
+        >
+            <a href="/glossary/w/watermelon/">Watermelon</a
+            >, matches "seeds"
+        </li>
+        
+        <li
+            data-result="seeds"
+            style="display: none;"
+        >
+            <a href="/glossary/o/orange/">Orange</a
+            >, matches "seeds"
+        </li>
+            
+        <li
+            data-result="round"
+            style="display: none;"
+        >
+            <a href="/glossary/a/apple/">Apple</a
+            >, matches "round"
+        </li>
+        
+        <li
+            data-result="round"
+            style="display: none;"
+        >
+            <a href="/glossary/c/cabbage/">Cabbage</a
+            >, matches "round"
+        </li>
+        
+        <li
+            data-result="round"
+            style="display: none;"
+        >
+            <a href="/glossary/w/watermelon/">Watermelon</a
+            >, matches "round"
+        </li>
+        
+        <li
+            data-result="round"
+            style="display: none;"
+        >
+            <a href="/glossary/o/orange/">Orange</a
+            >, matches "round"
+        </li>
+            
+        <li
+            data-result="red"
+            style="display: none;"
+        >
+            <a href="/glossary/a/apple/">Apple</a
+            >, matches "red"
+        </li>
+            
+        <li
+            data-result="no_seeds"
+            style="display: none;"
+        >
+            <a href="/glossary/b/banana/">Banana</a
+            >, matches "no seeds"
+        </li>
+        
+        <li
+            data-result="no_seeds"
+            style="display: none;"
+        >
+            <a href="/glossary/b/broccoli/">Broccoli</a
+            >, matches "no seeds"
+        </li>
+        
+        <li
+            data-result="no_seeds"
+            style="display: none;"
+        >
+            <a href="/glossary/c/cabbage/">Cabbage</a
+            >, matches "no seeds"
+        </li>
+        
+        <li
+            data-result="no_seeds"
+            style="display: none;"
+        >
+            <a href="/glossary/o/orange/">Orange</a
+            >, matches "no seeds"
+        </li>
+            
+        <li
+            data-result="tree-like"
+            style="display: none;"
+        >
+            <a href="/glossary/b/broccoli/">Broccoli</a
+            >, matches "tree-like"
+        </li>
+            
+        <li
+            data-result="yellow"
+            style="display: none;"
+        >
+            <a href="/glossary/b/banana/">Banana</a
+            >, matches "yellow"
+        </li>
+            
+        <li
+            data-result="orange"
+            style="display: none;"
+        >
+            <a href="/glossary/o/orange/">Orange</a
+            >, matches "orange"
+        </li>
+          
+    </ol>
+</section>
+
+<script>
+    const otherResults = (selected) => {
+        const allResults = [...document.querySelectorAll('#results li')]
+        return allResults.filter((result) => !selected.includes(result))
+    }
+
+    const showAll = (elements) => {
+        elements.forEach((el) => (el.style.display = 'block'))
+    }
+
+    const hideAll = (elements) => {
+        elements.forEach((el) => (el.style.display = 'none'))
+    }
+
+    const allTerms = [
+        ...document.querySelectorAll('#results [data-result]'),
+    ].map((result) => {
+        return result.dataset.result
+    })
+
+    const matchIndex = (input, terms) =>
+        terms.findIndex((term) => {
+            if (!input) return false
+            return term.includes(input)
+        })
+
+    const search = document.getElementById('search')
+    search.addEventListener('keyup', (e) => {
+        const matchingIndex = matchIndex(
+            e.currentTarget.value.toLowerCase().replace(' ', '_'),
+            allTerms
+        )
+        const matchingTerm = allTerms[matchingIndex]
+        let selected = [
+            ...document.querySelectorAll(`[data-result=${matchingTerm}]`),
+        ]
+
+        if (selected.length == 0) {
+            selected = [...document.querySelectorAll('[data-noresult]')]
+        }
+
+        showAll(selected)
+        hideAll(otherResults(selected))
+    })
+</script>
+
+        </div>
+    </body>
+</html>
