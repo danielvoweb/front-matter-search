@@ -18,49 +18,57 @@ url: /
 </section>
 <section>
     <ol id="results">
+        <li data-noresult style="display: none;">
+            No results found
+        </li>
         {% for tag, posts in collections %} {% if tag != "all" %} {% for post in
         posts %}
-        <li data-result="{{ tag }}">
+        <li data-result="{{ tag }}" style="display: none;">
             {{ post.data.title }}
             {{ post.data.url }}
         </li>
         {% endfor %} {% endif %} {% endfor %}
-        <li data-noresult>
-            No results found
-        </li>
     </ol>
 </section>
 
 <script>
-    // const search = document.getElementById('search')
-    // search.addEventListener('keyup', (e) => {
-    //     const searchString = search.value
-    //     const matchingResults = document.querySelectorAll(
-    //         `[data-${searchString}]`
-    //     )
-
-    //     matchingResults.forEach((el) => {
-    //         el.style.display = 'block'
-    //     })
-    // })
-
     const otherResults = (selected) => {
         const allResults = [...document.querySelectorAll('#results li')]
         return allResults.filter((result) => !selected.includes(result))
     }
 
-    const show = (el) => {
-        el.style.display = 'block'
-    }
-
-    const hide = (el) => {
-        el.style.display = 'none'
+    const showAll = (elements) => {
+        elements.forEach((el) => (el.style.display = 'block'))
     }
 
     const hideAll = (elements) => {
-        elements.forEach(hide)
+        elements.forEach((el) => (el.style.display = 'none'))
     }
 
-    const selected = [...document.querySelectorAll('[data-result=green]')]
-    hideAll(otherResults(selected))
+    const allTerms = [
+        ...document.querySelectorAll('#results [data-result]'),
+    ].map((result) => {
+        return result.dataset.result
+    })
+
+    const search = document.getElementById('search')
+    search.addEventListener('keyup', (e) => {
+        const matchingIndex = allTerms.findIndex((term) => {
+            const input = e.currentTarget.value
+            if (!input) return false
+            return term.includes(e.currentTarget.value)
+        })
+
+        const matchingTerm = allTerms[matchingIndex]
+        let selected = [
+            ...document.querySelectorAll(`[data-result=${matchingTerm}]`),
+        ]
+
+        if (selected.length == 0) {
+            selected = [...document.querySelectorAll('[data-noresult]')]
+        }
+
+        showAll(selected)
+        hideAll(otherResults(selected))
+    })
 </script>
