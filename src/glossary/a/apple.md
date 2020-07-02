@@ -5,4 +5,5 @@ url: /glossary/a/apple/
 tags:
     - round
     - red
+    - seeds
 ---

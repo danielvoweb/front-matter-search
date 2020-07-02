@@ -24,19 +24,19 @@ url: /
         {% for post in collections.all %} {% if post.data.title != "Index" %}
         <li
             data-result="{{ post.data.title.toLowerCase().replace(' ', '_') }}"
-            style="display: block;"
+            style="display: none;"
         >
-            Tag: {{ post.data.title }}, Title: {{ post.data.title }}, Url:
-            {{ post.data.url }}
+            <a href="{{ post.data.url }}">{{ post.data.title }}</a
+            >, matches "{{ post.data.title }}"
         </li>
         {% endif %} {% endfor %} {% for tag, posts in collections %} {% if tag
         != "all" %} {% for post in posts %}
         <li
             data-result="{{ tag.toLowerCase().replace(' ', '_') }}"
-            style="display: block;"
+            style="display: none;"
         >
-            Tag: {{ tag }}, Title: {{ post.data.title }}, Url:
-            {{ post.data.url }}
+            <a href="{{ post.data.url }}">{{ post.data.title }}</a
+            >, matches "{{ tag }}"
         </li>
         {% endfor %} {% endif %} {% endfor %}
     </ol>
