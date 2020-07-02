@@ -21,10 +21,18 @@ url: /
         <li data-noresult style="display: none;">
             No results found
         </li>
-        {% for tag, posts in collections %} {% if tag != "all" %} {% for post in
-        posts %}
-        <li data-result="{{ tag }}" style="display: none;">
-            {{ post.data.title }}
+        {% for post in collections.all %} {% if post.data.title != "Index" %}
+        <li
+            data-result="{{ post.data.title.toLowerCase() }}"
+            style="display: block;"
+        >
+            Tag: {{ post.data.title }}, Title: {{ post.data.title }}, Url:
+            {{ post.data.url }}
+        </li>
+        {% endif %} {% endfor %} {% for tag, posts in collections %} {% if tag
+        != "all" %} {% for post in posts %}
+        <li data-result="{{ tag.toLowerCase() }}" style="display: block;">
+            Tag: {{ tag }}, Title: {{ post.data.title }}, Url:
             {{ post.data.url }}
         </li>
         {% endfor %} {% endif %} {% endfor %}
@@ -59,7 +67,10 @@ url: /
 
     const search = document.getElementById('search')
     search.addEventListener('keyup', (e) => {
-        const matchingIndex = matchIndex(e.currentTarget.value, allTerms)
+        const matchingIndex = matchIndex(
+            e.currentTarget.value.toLowerCase(),
+            allTerms
+        )
         const matchingTerm = allTerms[matchingIndex]
         let selected = [
             ...document.querySelectorAll(`[data-result=${matchingTerm}]`),
