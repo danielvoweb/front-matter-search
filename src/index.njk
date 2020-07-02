@@ -23,7 +23,7 @@ url: /
         </li>
         {% for post in collections.all %} {% if post.data.title != "Index" %}
         <li
-            data-result="{{ post.data.title.toLowerCase() }}"
+            data-result="{{ post.data.title.toLowerCase().replace(' ', '_') }}"
             style="display: block;"
         >
             Tag: {{ post.data.title }}, Title: {{ post.data.title }}, Url:
@@ -31,7 +31,10 @@ url: /
         </li>
         {% endif %} {% endfor %} {% for tag, posts in collections %} {% if tag
         != "all" %} {% for post in posts %}
-        <li data-result="{{ tag.toLowerCase() }}" style="display: block;">
+        <li
+            data-result="{{ tag.toLowerCase().replace(' ', '_') }}"
+            style="display: block;"
+        >
             Tag: {{ tag }}, Title: {{ post.data.title }}, Url:
             {{ post.data.url }}
         </li>
@@ -68,7 +71,7 @@ url: /
     const search = document.getElementById('search')
     search.addEventListener('keyup', (e) => {
         const matchingIndex = matchIndex(
-            e.currentTarget.value.toLowerCase(),
+            e.currentTarget.value.toLowerCase().replace(' ', '_'),
             allTerms
         )
         const matchingTerm = allTerms[matchingIndex]
