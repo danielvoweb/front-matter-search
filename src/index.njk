@@ -51,14 +51,15 @@ url: /
         return result.dataset.result
     })
 
-    const search = document.getElementById('search')
-    search.addEventListener('keyup', (e) => {
-        const matchingIndex = allTerms.findIndex((term) => {
-            const input = e.currentTarget.value
+    const matchIndex = (input, terms) =>
+        terms.findIndex((term) => {
             if (!input) return false
-            return term.includes(e.currentTarget.value)
+            return term.includes(input)
         })
 
+    const search = document.getElementById('search')
+    search.addEventListener('keyup', (e) => {
+        const matchingIndex = matchIndex(e.currentTarget.value, allTerms)
         const matchingTerm = allTerms[matchingIndex]
         let selected = [
             ...document.querySelectorAll(`[data-result=${matchingTerm}]`),
