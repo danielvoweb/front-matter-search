@@ -5,4 +5,5 @@ url: /glossary/b/broccoli/
 tags:
     - green
     - no seeds
+    - tree-like
 ---
