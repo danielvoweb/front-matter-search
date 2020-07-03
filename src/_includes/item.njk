@@ -2,18 +2,27 @@
 layout: layout.njk
 ---
 
-<div class="content">
-    <h2>{{ title }}</h2>
+<section class="hero">
+    <div class="hero-body">
+        <div class="content">
+            <h2>{{ title }}</h2>
 
-    {{ content | safe }}
+            {{ content | safe }}
 
-    <h3>matching terms:</h3>
-    <ol>
-        {% for tag, posts in collections %} {% for post in posts %} {% if
-        post.data.title == title %} {% if tag != "all" %}
-        <li data-result="{{ tag.toLowerCase().replace(' ', '_') }}">
-            {{ tag }}
-        </li>
-        {% endif %} {% endif %} {% endfor %} {% endfor %}
-    </ol>
-</div>
+            <h3>matching terms:</h3>
+            <ol>
+                {% for tag, posts in collections %} {% for post in posts %} {%
+                if post.data.title == title %} {% if tag != "all" %}
+                <li data-result="{{ tag.toLowerCase().replace(' ', '_') }}">
+                    {{ tag }}
+                </li>
+                {% endif %} {% endif %} {% endfor %} {% endfor %}
+            </ol>
+        </div>
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="{{ '/' | url }}">Back to Search</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
