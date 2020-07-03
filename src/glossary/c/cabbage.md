@@ -5,7 +5,7 @@ url: /glossary/c/cabbage/
 tags:
     - green
     - round
-    - no seeds
+    - seedless
 ---
 
 cab·bage

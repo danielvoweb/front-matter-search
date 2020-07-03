@@ -8,6 +8,9 @@ url: /
     <div class="hero-body">
         <h1 class="title">Produce Glossary</h1>
         <div class="control has-icons-left">
+            <label for="search" class="is-sr-only"
+                >Produce Glossary Search</label
+            >
             <input
                 class="input"
                 autofocus
@@ -24,7 +27,7 @@ url: /
 </section>
 <section class="section">
     <ol id="results">
-        <li class="has-text-grey">
+        <li>
             <i class="far fa-lightbulb"></i>
             <em>
                 Tip: try searching "green" or "round"
@@ -34,17 +37,18 @@ url: /
             No results found...
         </li>
         {% for post in collections.all %} {% if post.data.title != "Index" %}
-        <li
-            data-result="{{ post.data.title.toLowerCase().replace(' ', '_') }}"
-            style="display: none;"
-        >
-            <a href="{{ post.data.url | url }}">{{ post.data.title }}</a
+        <li data-result="{{ post.data.title.toLowerCase().replace(' ', '_') }}">
+            <a href="{{ post.data.url | url }}" class="is-size-5">{{
+                post.data.title
+            }}</a
             >, matches "{{ post.data.title }}"
         </li>
         {% endif %} {% endfor %} {% for tag, posts in collections %} {% if tag
         != "all" %} {% for post in posts %}
         <li data-result="{{ tag.toLowerCase().replace(' ', '_') }}">
-            <a href="{{ post.data.url | url }}">{{ post.data.title }}</a
+            <a href="{{ post.data.url | url }}" class="is-size-5">{{
+                post.data.title
+            }}</a
             >, matches "{{ tag }}"
         </li>
         {% endfor %} {% endif %} {% endfor %}

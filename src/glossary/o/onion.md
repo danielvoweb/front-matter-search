@@ -4,8 +4,8 @@ title: Onion
 url: /glossary/o/onion/
 tags:
     - yellow
-    - no seeds
     - round
+    - layers
 ---
 
 on·ion

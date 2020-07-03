@@ -5,7 +5,7 @@ url: /glossary/o/orange/
 tags:
     - orange
     - seeds
-    - no seeds
+    - seedless
     - round
 ---
 

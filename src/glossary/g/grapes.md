@@ -6,7 +6,7 @@ tags:
     - green
     - purple
     - round
-    - no seeds
+    - seedless
     - seeds
     - red
     - black

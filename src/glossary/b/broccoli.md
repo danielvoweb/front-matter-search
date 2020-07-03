@@ -4,7 +4,7 @@ title: Broccoli
 url: /glossary/b/broccoli/
 tags:
     - green
-    - no seeds
+    - seedless
     - tree-like
 ---
 
