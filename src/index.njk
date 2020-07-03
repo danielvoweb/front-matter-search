@@ -26,7 +26,7 @@ url: /
             data-result="{{ post.data.title.toLowerCase().replace(' ', '_') }}"
             style="display: none;"
         >
-            <a href="{{ post.data.url }}">{{ post.data.title }}</a
+            <a href="{{ post.data.url | url }}">{{ post.data.title }}</a
             >, matches "{{ post.data.title }}"
         </li>
         {% endif %} {% endfor %} {% for tag, posts in collections %} {% if tag
@@ -35,7 +35,7 @@ url: /
             data-result="{{ tag.toLowerCase().replace(' ', '_') }}"
             style="display: none;"
         >
-            <a href="{{ post.data.url }}">{{ post.data.title }}</a
+            <a href="{{ post.data.url | url }}">{{ post.data.title }}</a
             >, matches "{{ tag }}"
         </li>
         {% endfor %} {% endif %} {% endfor %}

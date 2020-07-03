@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "npx @11ty/eleventy --serve --port=8088",
-        "deploy": "npx @11ty/eleventy --output=docs"
+        "start": "npx @11ty/eleventy --serve --input=src --output=dist --port=8088",
+        "deploy": "npx @11ty/eleventy --input=src --output=docs --pathprefix=/front-matter-search/"
     },
     "repository": {
         "type": "git",
