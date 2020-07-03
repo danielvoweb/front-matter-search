@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "npx @11ty/eleventy --serve --input=src --output=dist --port=8088",
-        "deploy": "npx @11ty/eleventy --input=src --output=docs --pathprefix=/front-matter-search/"
+        "start": "npx @11ty/eleventy --serve --port=8088",
+        "deploy": "npx @11ty/eleventy --config=.eleventy.deploy.js"
     },
     "repository": {
         "type": "git",
@@ -23,6 +23,7 @@
     },
     "homepage": "https://github.com/danielvoweb/front-matter-search#readme",
     "devDependencies": {
-        "@11ty/eleventy": "^0.11.0"
+        "@11ty/eleventy": "^0.11.0",
+        "html-minifier": "^4.0.0"
     }
 }
