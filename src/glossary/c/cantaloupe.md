@@ -6,6 +6,7 @@ tags:
     - orange
     - seeds
     - round
+    - fruit
 ---
 
 can·ta·loupe

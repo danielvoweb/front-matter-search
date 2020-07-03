@@ -6,6 +6,7 @@ tags:
     - green
     - seedless
     - tree-like
+    - vegetable
 ---
 
 broc·co·li

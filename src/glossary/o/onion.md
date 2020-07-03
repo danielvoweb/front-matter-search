@@ -6,6 +6,8 @@ tags:
     - yellow
     - round
     - layers
+    - white
+    - vegetable
 ---
 
 on·ion

@@ -10,6 +10,7 @@ tags:
     - seeds
     - red
     - black
+    - fruit
 ---
 
 grape

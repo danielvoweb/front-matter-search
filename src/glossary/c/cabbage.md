@@ -6,6 +6,7 @@ tags:
     - green
     - round
     - seedless
+    - vegetable
 ---
 
 cab·bage

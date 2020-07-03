@@ -6,6 +6,7 @@ tags:
     - round
     - red
     - seeds
+    - fruit
 ---
 
 ap·ple

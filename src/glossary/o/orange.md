@@ -7,6 +7,7 @@ tags:
     - seeds
     - seedless
     - round
+    - fruit
 ---
 
 or·ange

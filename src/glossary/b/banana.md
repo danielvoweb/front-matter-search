@@ -5,6 +5,7 @@ url: /glossary/b/banana/
 tags:
     - yellow
     - seedless
+    - fruit
 ---
 
 ba·nan·a

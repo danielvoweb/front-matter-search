@@ -5,6 +5,7 @@ url: /glossary/l/lettuce/
 tags:
     - green
     - leafy
+    - vegetable
 ---
 
 let·tuce

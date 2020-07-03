@@ -6,8 +6,10 @@ tags:
     - green
     - round
     - seeds
+    - seedless
     - red
     - gourd
+    - fruit
 ---
 
 wa·ter·mel·on

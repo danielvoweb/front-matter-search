@@ -5,6 +5,7 @@ url: /glossary/a/avocado/
 tags:
     - green
     - seeds
+    - fruit
 ---
 
 av·o·ca·do

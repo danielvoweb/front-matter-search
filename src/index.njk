@@ -29,9 +29,9 @@ url: /
     <ol id="results">
         <li>
             <i class="far fa-lightbulb"></i>
-            <em>
-                Tip: try searching "green" or "round"
-            </em>
+            <em>Tip:</em>
+            Try searching <span class="tag">green</span> or
+            <span class="tag">round</span>
         </li>
         <li data-noresult>
             No results found...
@@ -41,7 +41,7 @@ url: /
             <a href="{{ post.data.url | url }}" class="is-size-5">{{
                 post.data.title
             }}</a
-            >, matches "{{ post.data.title }}"
+            >, matches <span class="tag">{{ post.data.title }}</span>
         </li>
         {% endif %} {% endfor %} {% for tag, posts in collections %} {% if tag
         != "all" %} {% for post in posts %}
@@ -49,7 +49,7 @@ url: /
             <a href="{{ post.data.url | url }}" class="is-size-5">{{
                 post.data.title
             }}</a
-            >, matches "{{ tag }}"
+            >, matches <span class="tag">{{ tag }}</span>
         </li>
         {% endfor %} {% endif %} {% endfor %}
     </ol>
