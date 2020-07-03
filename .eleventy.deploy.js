@@ -20,6 +20,6 @@ module.exports = (config) => {
             input: 'src',
             output: 'docs',
         },
-        pathPrefix: '/front-matter-serach/',
+        pathPrefix: '/front-matter-search/',
     }
 }
