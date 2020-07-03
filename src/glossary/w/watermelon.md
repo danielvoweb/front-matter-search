@@ -7,6 +7,7 @@ tags:
     - round
     - seeds
     - red
+    - gourd
 ---
 
 wa·ter·mel·on

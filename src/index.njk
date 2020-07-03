@@ -24,7 +24,13 @@ url: /
 </section>
 <section class="section">
     <ol id="results">
-        <li data-noresult style="display: none;">
+        <li class="has-text-grey">
+            <i class="far fa-lightbulb"></i>
+            <em>
+                Tip: try searching "green" or "round"
+            </em>
+        </li>
+        <li data-noresult>
             No results found
         </li>
         {% for post in collections.all %} {% if post.data.title != "Index" %}
@@ -37,10 +43,7 @@ url: /
         </li>
         {% endif %} {% endfor %} {% for tag, posts in collections %} {% if tag
         != "all" %} {% for post in posts %}
-        <li
-            data-result="{{ tag.toLowerCase().replace(' ', '_') }}"
-            style="display: none;"
-        >
+        <li data-result="{{ tag.toLowerCase().replace(' ', '_') }}">
             <a href="{{ post.data.url | url }}">{{ post.data.title }}</a
             >, matches "{{ tag }}"
         </li>

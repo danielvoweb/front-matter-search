@@ -10,14 +10,14 @@ layout: layout.njk
             {{ content | safe }}
 
             <h3>matching terms:</h3>
-            <ol>
+            <div class="tags">
                 {% for tag, posts in collections %} {% for post in posts %} {%
                 if post.data.title == title %} {% if tag != "all" %}
-                <li data-result="{{ tag.toLowerCase().replace(' ', '_') }}">
+                <span class="tag">
                     {{ tag }}
-                </li>
+                </span>
                 {% endif %} {% endif %} {% endfor %} {% endfor %}
-            </ol>
+            </div>
         </div>
         <nav class="breadcrumb">
             <ul>
