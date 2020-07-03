@@ -7,6 +7,8 @@ module.exports = (config) => {
                 useShortDoctype: true,
                 removeComments: true,
                 collapseWhitespace: true,
+                minifyCSS: true,
+                minifyJS: true,
             })
 
             return minified
