@@ -9,23 +9,33 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
         />
+        <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+        ></script>
     </head>
     <body>
         <div class="container">
             
-<section>
-    <h1 class="title">Glossary Search</h1>
-
-    <input
-        class="input"
-        autofocus
-        autocomplete="off"
-        type="search"
-        id="search"
-        placeholder="Use a keyword to describe a fruit or vegetable..."
-    />
+<section class="hero">
+    <div class="hero-body">
+        <h1 class="title">Produce Glossary</h1>
+        <div class="control has-icons-left">
+            <input
+                class="input"
+                autofocus
+                autocomplete="off"
+                type="search"
+                id="search"
+                placeholder="Use a keyword to describe a fruit or vegetable..."
+            />
+            <span class="icon is-left">
+                <i class="fas fa-search"></i>
+            </span>
+        </div>
+    </div>
 </section>
-<section>
+<section class="section">
     <ol id="results">
         <li data-noresult style="display: none;">
             No results found
@@ -86,79 +96,31 @@
             <a href="/front-matter-search/glossary/w/watermelon/">Watermelon</a
             >, matches "Watermelon"
         </li>
+          
+        <li
+            data-result="onion"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/o/onion/">Onion</a
+            >, matches "Onion"
+        </li>
+          
+        <li
+            data-result="lettuce"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/l/lettuce/">Lettuce</a
+            >, matches "Lettuce"
+        </li>
+          
+        <li
+            data-result="cantaloupe"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/c/cantaloupe/">Cantaloupe</a
+            >, matches "Cantaloupe"
+        </li>
               
-        <li
-            data-result="round"
-            style="display: none;"
-        >
-            <a href="/front-matter-search/glossary/a/apple/">Apple</a
-            >, matches "round"
-        </li>
-        
-        <li
-            data-result="round"
-            style="display: none;"
-        >
-            <a href="/front-matter-search/glossary/c/cabbage/">Cabbage</a
-            >, matches "round"
-        </li>
-        
-        <li
-            data-result="round"
-            style="display: none;"
-        >
-            <a href="/front-matter-search/glossary/o/orange/">Orange</a
-            >, matches "round"
-        </li>
-        
-        <li
-            data-result="round"
-            style="display: none;"
-        >
-            <a href="/front-matter-search/glossary/w/watermelon/">Watermelon</a
-            >, matches "round"
-        </li>
-            
-        <li
-            data-result="red"
-            style="display: none;"
-        >
-            <a href="/front-matter-search/glossary/a/apple/">Apple</a
-            >, matches "red"
-        </li>
-            
-        <li
-            data-result="seeds"
-            style="display: none;"
-        >
-            <a href="/front-matter-search/glossary/a/apple/">Apple</a
-            >, matches "seeds"
-        </li>
-        
-        <li
-            data-result="seeds"
-            style="display: none;"
-        >
-            <a href="/front-matter-search/glossary/a/avocado/">Avocado</a
-            >, matches "seeds"
-        </li>
-        
-        <li
-            data-result="seeds"
-            style="display: none;"
-        >
-            <a href="/front-matter-search/glossary/o/orange/">Orange</a
-            >, matches "seeds"
-        </li>
-        
-        <li
-            data-result="seeds"
-            style="display: none;"
-        >
-            <a href="/front-matter-search/glossary/w/watermelon/">Watermelon</a
-            >, matches "seeds"
-        </li>
-            
         <li
             data-result="green"
             style="display: none;"
@@ -189,6 +151,134 @@
         >
             <a href="/front-matter-search/glossary/w/watermelon/">Watermelon</a
             >, matches "green"
+        </li>
+        
+        <li
+            data-result="green"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/l/lettuce/">Lettuce</a
+            >, matches "green"
+        </li>
+            
+        <li
+            data-result="seeds"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/a/apple/">Apple</a
+            >, matches "seeds"
+        </li>
+        
+        <li
+            data-result="seeds"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/a/avocado/">Avocado</a
+            >, matches "seeds"
+        </li>
+        
+        <li
+            data-result="seeds"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/o/orange/">Orange</a
+            >, matches "seeds"
+        </li>
+        
+        <li
+            data-result="seeds"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/w/watermelon/">Watermelon</a
+            >, matches "seeds"
+        </li>
+        
+        <li
+            data-result="seeds"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/c/cantaloupe/">Cantaloupe</a
+            >, matches "seeds"
+        </li>
+            
+        <li
+            data-result="round"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/a/apple/">Apple</a
+            >, matches "round"
+        </li>
+        
+        <li
+            data-result="round"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/c/cabbage/">Cabbage</a
+            >, matches "round"
+        </li>
+        
+        <li
+            data-result="round"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/o/orange/">Orange</a
+            >, matches "round"
+        </li>
+        
+        <li
+            data-result="round"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/w/watermelon/">Watermelon</a
+            >, matches "round"
+        </li>
+        
+        <li
+            data-result="round"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/o/onion/">Onion</a
+            >, matches "round"
+        </li>
+        
+        <li
+            data-result="round"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/c/cantaloupe/">Cantaloupe</a
+            >, matches "round"
+        </li>
+            
+        <li
+            data-result="red"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/a/apple/">Apple</a
+            >, matches "red"
+        </li>
+        
+        <li
+            data-result="red"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/w/watermelon/">Watermelon</a
+            >, matches "red"
+        </li>
+            
+        <li
+            data-result="yellow"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/b/banana/">Banana</a
+            >, matches "yellow"
+        </li>
+        
+        <li
+            data-result="yellow"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/o/onion/">Onion</a
+            >, matches "yellow"
         </li>
             
         <li
@@ -220,6 +310,14 @@
             style="display: none;"
         >
             <a href="/front-matter-search/glossary/o/orange/">Orange</a
+            >, matches "no seeds"
+        </li>
+        
+        <li
+            data-result="no_seeds"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/o/onion/">Onion</a
             >, matches "no seeds"
         </li>
             
@@ -232,19 +330,27 @@
         </li>
             
         <li
-            data-result="yellow"
-            style="display: none;"
-        >
-            <a href="/front-matter-search/glossary/b/banana/">Banana</a
-            >, matches "yellow"
-        </li>
-            
-        <li
             data-result="orange"
             style="display: none;"
         >
             <a href="/front-matter-search/glossary/o/orange/">Orange</a
             >, matches "orange"
+        </li>
+        
+        <li
+            data-result="orange"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/c/cantaloupe/">Cantaloupe</a
+            >, matches "orange"
+        </li>
+            
+        <li
+            data-result="leafy"
+            style="display: none;"
+        >
+            <a href="/front-matter-search/glossary/l/lettuce/">Lettuce</a
+            >, matches "leafy"
         </li>
           
     </ol>
