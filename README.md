@@ -1,5 +1,7 @@
 # Front Matter Search
 
+Demo: [https://danielvoweb.github.io/front-matter-search/](https://danielvoweb.github.io/front-matter-search/)
+
 ## What is Front Matter Search?
 
 Front Matter Search is a technique demo to create a simple search based on author-defined key terms using eleventy.js front matter data to create a simple search based on article tags and titles.
