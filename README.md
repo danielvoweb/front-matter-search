@@ -17,16 +17,16 @@ Simply adding a new markdwon file with front matter data populates search result
 Example:
 
 ```
-    ---
-    layout: item.njk
-    title: Apple
-    url: /glossary/a/apple/
-    tags:
-        - round
-        - red
-        - seeds
-        - fruit
-    ---
+---
+layout: item.njk
+title: Apple
+url: /glossary/a/apple/
+tags:
+    - round
+    - red
+    - seeds
+    - fruit
+---
 ```
 
 ## The Good
@@ -46,14 +46,20 @@ Since all results are loaded into DOM, there's potential to see a lot of bloat, 
 
 ## Get Started
 
-```js
-    npm i
-```
+Install dependencies:
 
 ```js
-    npm start
+npm i
 ```
 
+To run locally on port 8088:
+
 ```js
-    npm deploy
+npm start
+```
+
+Push changes to /docs folder in repo; run before pushing changes:
+
+```js
+npm deploy
 ```
